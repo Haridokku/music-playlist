@@ -134,6 +134,9 @@ class App extends Component {
             </div>
           </div>
           <ul className="unorderedList">
+            {modifiedList.length === 0 && (
+              <h1 className="head">No Songs Found</h1>
+            )}
             {modifiedList.map(each => (
               <PlaylistItem
                 key={each.id}
