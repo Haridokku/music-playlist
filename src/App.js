@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import {IoIosSearch} from 'react-icons/io'
 import {Component} from 'react'
 import PlaylistItem from './components/PlaylistItem'
@@ -100,6 +101,7 @@ class App extends Component {
     const updated = trackList.filter(each =>
       each.name.toLowerCase().includes(searchInput.toLowerCase()),
     )
+    return updated
   }
 
   onDeletePlayListItem = id => {
@@ -122,8 +124,8 @@ class App extends Component {
             <h1 className="head">Songs Playlist</h1>
             <div className="search">
               <input
-                type="text"
-                placeholder="search"
+                type="search"
+                placeholder="Search"
                 value={searchInput}
                 className="input"
                 onChange={this.onChangeInput}
@@ -135,7 +137,7 @@ class App extends Component {
           </div>
           <ul className="unorderedList">
             {modifiedList.length === 0 && (
-              <h1 className="head">No Songs Found</h1>
+              <p className="noSongs">No Songs Found</p>
             )}
             {modifiedList.map(each => (
               <PlaylistItem

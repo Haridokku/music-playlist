@@ -1,6 +1,6 @@
 .list-item {
   list-style-type: none;
-  margin: 10px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,11 +10,11 @@
   align-items: center;
 }
 .image {
-  width: 150px;
+  width: 200px;
   height: 150px;
 }
 .genreContainer {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .heading {
   color: #ffffff;
@@ -22,8 +22,21 @@
   font-weight: bold;
   font-family: 'Roboto';
 }
+.describe {
+  color: #3b82f6;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.durationAndDeleteContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
 .deleteBtn {
   outline: none;
   cursor: pointer;
   border: none;
+  background-color: transparent;
+  color: #ffffff;
 }

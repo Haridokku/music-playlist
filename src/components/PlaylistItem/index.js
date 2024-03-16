@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import {AiOutlineDelete} from 'react-icons/ai'
+import {RiDeleteBin7Line} from 'react-icons/ri'
 
 import './index.css'
 
@@ -12,15 +14,20 @@ const PlaylistItem = props => {
   return (
     <li className="list-item">
       <div className="imgAndGenreContainer">
-        <img src={imageUrl} className="image" />
+        <img src={imageUrl} alt="track" className="image" />
         <div className="genreContainer">
-          <h1 className="heading">{name}</h1>
+          <p className="heading">{name}</p>
           <p className="describe">{genre}</p>
         </div>
       </div>
       <div className="durationAndDeleteContainer">
-        <h1 className="heading">{duration}</h1>
-        <button type="button" onClick={deleteTrack} className="deleteBtn">
+        <p className="heading">{duration}</p>
+        <button
+          type="button"
+          onClick={deleteTrack}
+          className="deleteBtn"
+          data-testid="delete"
+        >
           <AiOutlineDelete size={20} />
         </button>
       </div>
