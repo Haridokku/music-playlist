@@ -1,0 +1,29 @@
+.list-item {
+  list-style-type: none;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.imgAndGenreContainer {
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 150px;
+  height: 150px;
+}
+.genreContainer {
+  margin-left: 10px;
+}
+.heading {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.deleteBtn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
